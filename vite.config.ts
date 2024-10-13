@@ -8,5 +8,10 @@ export default defineConfig({
         keycloakify({
             accountThemeImplementation: "none"
         })
-    ]
+    ],
+    server: {
+        fs: {
+            deny: ['/secret-files', '/config']
+        }
+    }
 });
